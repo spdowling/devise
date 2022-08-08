@@ -1,0 +1,123 @@
+// TODO(spdowling) this should import from a common style or theming package
+// that then represents the combination of picocss and our own root or core
+// library additions
+@import "../../index.scss";
+
+:host {
+    display: block;
+}
+
+input {
+    text-overflow: ellipsis;
+}
+
+ul {
+    position: absolute;
+    max-height: 226px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    /*
+    left: 0;
+    right: 0;
+    */
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid rgba(33, 33, 33, 0.07);
+    box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
+
+    /* outline: none; */
+
+    &[hidden],
+    &:empty {
+        display: block;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    > li {
+        margin: 0.3rem;
+        padding: 0.3rem 0.5rem;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #cdcdcd;
+        }
+
+        &[aria-selected="true"] {
+            background-color: #cdcdcd;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 18rem;
+    }
+}
+
+// css`
+//     :host {
+//         display: block;
+//     }
+
+//     input {
+//         text-overflow: ellipsis;
+//     }
+
+//     ul {
+//         position: absolute;
+//         max-height: 226px;
+//         overflow-y: scroll;
+//         box-sizing: border-box;
+//         /*
+//         left: 0;
+//         right: 0;
+//         */
+//         margin: 0.5rem 0 0 0;
+//         padding: 0;
+//         z-index: 1;
+//         list-style: none;
+//         background-color: #fff;
+//         border: 1px solid rgba(33, 33, 33, 0.07);
+//         box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
+//         /* outline: none; */
+//     }
+
+//     ul[hidden], ul:empty {
+//         display: block;
+//         opacity: 0;
+//         transform: scale(0);
+//     }
+
+//     ul > li {
+//         margin: 0.3rem;
+//         padding: 0.3rem 0.5rem;
+//         text-align: left;
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//     }
+
+//     ul > li:hover {
+//         cursor: pointer;
+//         background-color: #cdcdcd;
+//     }
+
+//     ul > li[aria-selected="true"] {
+//         background-color: #cdcdcd;
+//     }
+
+//     @media only screen and (max-width: 600px) {
+//         input {
+//             width: 18rem;
+//         }
+//     }
+// `,

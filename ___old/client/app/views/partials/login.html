@@ -1,0 +1,9 @@
+<form class="form-signin" ng-submit="ok()" role="form">
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <input type="username" class="form-control" placeholder="Username" ng-model="data.username" required autofocus>
+  <input type="password" class="form-control" placeholder="Password" ng-model="data.password" required>
+  <label class="checkbox">
+    <input type="checkbox" value="remember-me" ng-model="data.remember"> Remember me
+  </label>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>

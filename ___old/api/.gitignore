@@ -1,0 +1,6 @@
+.DS_Store
+.nodemonignore
+node_modules/
+public/lib
+test/coverage
+/public/build/

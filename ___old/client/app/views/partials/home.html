@@ -1,0 +1,15 @@
+<!-- want to be able to define in the configuration a target API endpoint to use. -->
+<!-- to make this work for multiple environments, we would need to store session information with an environment prefix
+somehow, so that we know the cache to use for this particular environment
+-->
+
+<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+<form class="form-signin" ng-submit="connect()" role="form">
+  <h2 class="form-signin-heading">Please Identify Environment</h2>
+  <input type="username" class="form-control" placeholder="Username" ng-model="data.username" required autofocus>
+  <input type="password" class="form-control" placeholder="Password" ng-model="data.password" required>
+  <label class="checkbox">
+    <input type="checkbox" value="remember-me" ng-model="data.remember"> Remember me
+  </label>
+
+</form>

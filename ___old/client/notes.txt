@@ -1,0 +1,54 @@
+Use case 1:
+
+Login page
+Choose target environment
+	-- choosing this item implies that we have a configured list of environments somewhere
+	-- this again implies that we can introduce a new set of environments in the configuration
+	-- and have it load it up again...
+	-- we can either store environments in the static configuration files
+	-- or allow users to edit as they wish
+Enter username and password
+Validate before submit
+Submit
+Login success - go to dashboard
+Login failure - flash message error
+
+Use case 2:
+
+From dashboard go to pattern editor
+Should show all available patterns
+Can subclass a pattern to create a new one
+Can edit an existing pattern
+Subclass Product
+Can't edit inherited items
+Add new attributes
+Cancel (discard changes)
+Subclass product again name it ProductTwo
+Save
+List should include new item sorted into list
+
+Use case 3:
+
+Go to instance editor
+Should see all instances
+Create new instance
+Select ProductTwo as Pattern to use
+Fill in some values
+Save
+- new instance created by me so not available to anybody else to edit until I save
+Edit again
+This will fork/branch and generate a workspace version assigned to me
+Edit and save
+Now in merge mode or ready to merge
+
+Use case 4:
+
+Go to instance management
+Shows instances and which ones have changes outstanding
+Merge changes we made to instance
+Saving this forces actual update of real instance
+Others can now see the changes when viewing their version? Possibly only after saving their changes. Unless we put in some ability to auto update....
+Another user saves their version
+When opening the item they can switch between the general version and their own workspace version
+They can get the latest values by rebasing their branch against original
+That means instance mgmt should be an tab of some kind? Could well be.

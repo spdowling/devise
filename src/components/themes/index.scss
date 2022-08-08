@@ -1,0 +1,12 @@
+@import "./@picocss/pico/scss/pico";
+
+// NOTE(spdowling) reduce the overall padding-top for all blocks.
+// mostly helps with `main > folio-designer`
+// :root {
+//     // TODO(spdowling) for some reason this doesn't get applied
+//     // and inside we get re-overidden again from the head imported
+//     // version of pico (scss.proxy.js?)
+//     // we are importing the whole of pico, themes and all, which overrides
+//     // anything we may set for our own theme options.
+//     --block-spacing-vertical: calc(var(--spacing) * 2);
+// }

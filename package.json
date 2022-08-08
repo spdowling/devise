@@ -1,0 +1,20 @@
+{
+    "name": "designer",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "show": "snowpack dev",
+        "pack": "esbuild app.jsx --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16",
+        "bump": "yarn upgrade --latest"
+    },
+    "dependencies": {
+        "idb": "^7.0.2",
+        "lit": "^2.2.8",
+        "nanoid": "^4.0.0"
+    },
+    "devDependencies": {
+        "@picocss/pico": "^1.5.3",
+        "esbuild": "^0.14.53",
+        "sass": "^1.54.3"
+    }
+}
